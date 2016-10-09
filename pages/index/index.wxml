@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view style="height: 100%;">
+  <view class="top-bar">
+    <view class="flex-space-around">
+      <view>
+        <input type="text" class="searchTxt" bindinput="bindSearchTxtInput" placeholder="可按物品名称搜索" placeholder-style="text-align:center"/>
+      </view>
+      <view>
+        <button size="mini" style="color:#007AFF;border-color:#007AFF" plain="true" bindtap="tapSearchBtn">搜索</button>
+      </view>
+    </view>
+    <view class="flex-space-between" style="padding-top:30rpx">
+      <view class="flex-space-between margin-left" > 
+        <button size="mini" bindtap="addGoods" class="btn-primary margin-right" style="width:70px;">新增</button>
+      </view>
+      <view class="flex-space-around margin-right" >
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+              <view class="typeChoose">
+                  类别筛选：{{array[index]}}
+              </view>
+          </picker>
+      </view>
+    </view>  
+  </view>
+
+  <scroll-view scroll-y="true" style="height:100%" bindscrolltolower="lower" >
+    <view style="margin-top:200rpx"></view>
+    <view wx:for="{{listItems}}">
+      <view bindtap="editGoods" data-id="{{item.goods_id}}" class="flex-space-between list-row">
+        <view class="flex-space-between margin-left">
+          <view style="color:gray;padding-right:10rpx">[{{item.type_nm}}]</view> {{item.goods_name}}
+        </view>
+        <view class="margin-right">{{item.goods_price}}元 ></view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>

@@ -1,0 +1,37 @@
+/**index.wxss**/
+
+.top-bar {
+  position: fixed;
+  top:0;
+  z-index:1;
+  height:200rpx;
+  width:100%;
+  background: #fff;
+}
+
+.searchTxt {
+    background-color: #F8F8FF;
+    width:500rpx;
+    font-size:30rpx;
+}
+
+.typeChoose {
+    background-color: #F8F8FF;
+    width:500rpx;
+    font-size:35rpx;
+    text-align: center;
+    border:solid 1px black;
+    padding-top: 5rpx;
+    padding-bottom: 5rpx;
+    border-radius: 10rpx;
+}
+
+.flex-item{
+    
+}
+
+.list-row {
+    padding: 20rpx 0rpx 20rpx;
+    border-bottom:2rpx solid lightgray;
+    font-size:30rpx
+}

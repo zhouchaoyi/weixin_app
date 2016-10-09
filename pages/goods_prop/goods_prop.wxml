@@ -1,0 +1,48 @@
+<form bindsubmit="formSubmit">
+    <view class="flex-space-between form-item">
+        <label>物品名称</label>
+        <input type="text" value="{{goodsNm}}" name="goodsNm" placeholder="请输入物品名称" />
+    </view>
+    <view class="flex-space-between form-item">
+        <label>类别</label>
+        <!--<label>雅士利</label>-->
+        <view>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" >
+                <view class="typeChoose">
+                    {{array[index]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="flex-space-between form-item" >
+        <label>正常价格</label>
+        <input type="number" value="{{goodsPrice}}" name="goodsPrice" placeholder="请输入正常价格" />
+    </view>
+    <view class="flex-space-between form-item" >
+        <label>最低价格</label>
+        <input type="number" value="{{lowPrice}}" name="lowPrice" placeholder="可以不填" />
+    </view>
+    <view class="flex-space-between form-item" >
+        <label>备注</label>
+        <input type="text" value="{{remark}}" name="remark" placeholder="可以不填" />
+    </view>
+
+
+    <view class="flex-space-around btn-group">
+        <view>
+            <button size="mini" form-type="submit" class="btn-primary" style="width:70px;">确定</button>
+        </view>
+        <view wx:if="{{showDelBtn}}">
+            <button size="mini" bindtap="delGoods" class="btn-danger" style="width:70px;" >删除</button>
+        </view>
+    </view>
+</form>
+
+<modal hidden="{{modalHidden}}" no-cancel bindconfirm="bindconfirm">
+  <view> {{modalTxt}} </view>
+</modal>
+
+<modal hidden="{{delModalHidden}}" bindconfirm="delConfirm" bindcancel="delCancel">
+  <view> 确定要删除吗 </view>
+</modal>
+

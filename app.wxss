@@ -1,0 +1,45 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  color:white;
+  background-color:#007AFF;
+}
+.btn-primary-outlined {
+  color:#007AFF;
+  border-color:#007AFF;
+}
+.btn-danger {
+  color:white;
+  background-color:#DC143C;
+}
+.margin-left {
+  margin-left: 20rpx;
+}
+.margin-right {
+  margin-right: 20rpx;
+}
+
+.flex-space-between{
+    display:flex;
+    justify-content: space-between;
+}
+
+.flex-space-around{
+    display:flex;
+    justify-content: space-around;
+}
+
+.flex-center{
+    display:flex;
+    justify-content: center;
+}
+

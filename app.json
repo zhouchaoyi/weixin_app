@@ -1,0 +1,31 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/goods_prop/goods_prop",
+    "pages/main/main"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "物品管理",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"#272636",
+    "selectedColor":"#80bd01",
+    "backgroundColor":"#fff",
+    "borderStyle":"white",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"物品",
+      "iconPath":"images/tabBar/list.png",
+      "selectedIconPath":"images/tabBar/list_hl.png"
+    },{
+      "pagePath":"pages/main/main",
+      "text":"客户",
+      "iconPath":"images/tabBar/my.png",
+      "selectedIconPath":"images/tabBar/my_hl.png"
+      
+    }]
+  }
+}
